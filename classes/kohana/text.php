@@ -165,14 +165,8 @@ class Kohana_Text {
 	 * @return  string
 	 * @uses    UTF8::split
 	 */
-	public static function random($type = NULL, $length = 8)
+	public static function random($type = 'alnum', $length = 8)
 	{
-		if ($type === NULL)
-		{
-			// Default is to generate an alphanumeric string
-			$type = 'alnum';
-		}
-
 		$utf8 = FALSE;
 
 		switch ($type)
